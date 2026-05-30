@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintArt – Láminas, Lapbooks & Diseño para Estudiantes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Google+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="promo-bar">
+        <div class="promo-bar__track">
+            <span>🔥 PROMOCIÓN POR TIEMPO LIMITADO 🔥 -15% EN IDENTIDADES DE MARCA 🏷️ CIERTAS CONDICIONES APLICAN ⚠️ ✨</span>
+            <span>🔥 PROMOCIÓN POR TIEMPO LIMITADO 🔥 -15% EN IDENTIDADES DE MARCA 🏷️ CIERTAS CONDICIONES APLICAN ⚠️ ✨</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <span class="logo__icon">
+                    <img src="img/icono.webp" alt="PrintArt" width="34" height="34" class="logo__img">
+                </span>
+                <span class="logo__text">Print<span class="logo__accent">Art</span></span>
+                </a>
+                <nav class="nav" id="nav">
+                    <ul class="nav__list">
+                        <li><a href="#hero" class="nav__link active">Inicio</a></li>
+                        <li><a href="#about" class="nav__link">Nosotros</a></li>
+                        <li><a href="#gallery" class="nav__link">Galería</a></li>
+                        <li><a href="#process" class="nav__link">Cómo Funciona</a></li>
+                        <li><a href="#pricing" class="nav__link">Precios</a></li>
+                        <li><a href="#contact" class="nav__link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <a href="https://wa.me/5215512345678" class="btn btn--wa" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i>
+                        Cotiza ahora
+                    </a>
+                    <button class="hamburger" id="hamburger" aria-label="Menú">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <canvas class="hero__canvas" id="neuralCanvas"></canvas>
+        <div class="hero__content">
+            <span class="hero__badge">✧ Diseño académico profesional</span>
+            <h1 class="hero__title">TUS LÁMINAS Y LAPBOOKS<br>LISTOS EN 48 HORAS</h1>
+            <p class="hero__subtitle">Mapas mentales, carteleras, identidad de marca y más. Nosotros diseñamos, tú brillas.</p>
+            <div class="hero__cta">
+                <a href="https://wa.me/5215512345678" class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    Quiero mi diseño
+                </a>
+                <a href="#gallery" class="btn btn--ghost btn--lg">Ver trabajos</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats__grid">
+                <div class="stats__item">
+                    <span class="stats__number">500+</span>
+                    <span class="stats__label">Proyectos realizados</span>
+                </div>
+                <div class="stats__item">
+                    <span class="stats__number">24h</span>
+                    <span class="stats__label">Entrega exprés</span>
+                </div>
+                <div class="stats__item">
+                    <span class="stats__number">98%</span>
+                    <span class="stats__label">Clientes satisfechos</span>
+                </div>
+                <div class="stats__item">
+                    <span class="stats__number">50+</span>
+                    <span class="stats__label">Universidades</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__image">
+                    <div class="about__image-wrapper">
+                        <div class="about__placeholder">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <svg class="about__splatter" viewBox="0 0 200 200" fill="none">
+                            <circle cx="100" cy="100" r="80" fill="rgba(229,158,221,0.1)"/>
+                            <circle cx="30" cy="40" r="25" fill="rgba(253,246,240,0.35)"/>
+                            <circle cx="170" cy="30" r="20" fill="rgba(242,200,238,0.25)"/>
+                            <ellipse cx="160" cy="170" rx="35" ry="15" fill="rgba(208,126,200,0.15)" transform="rotate(15 160 170)"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="about__content">
+                    <span class="section__tag">Sobre nosotros</span>
+                    <h2 class="section__title">Diseño que te hace<br>quedar bien en clase</h2>
+                    <p class="about__text">
+                        Sabemos lo que es tener mil cosas que hacer y un proyecto escolar que entregar al día siguiente. 
+                        En <strong>PrintArt</strong> transformamos tus ideas en láminas, lapbooks y carteleras profesionales 
+                        mientras tú te dedicas a lo importante: <strong>estudiar y descansar</strong>.
+                    </p>
+                    <p class="about__text">
+                        Trabajamos con estudiantes de universidad, colegio y emprendedores que necesitan 
+                        una identidad de marca sólida. Cada proyecto lo tratamos con el mismo cariño y 
+                        profesionalismo, porque <strong>tu nota y tu imagen importan</strong>.
+                    </p>
+                    <div class="about__features">
+                        <div class="about__feature">
+                            <i class="fas fa-check-circle"></i>
+                            Diseño profesional en tiempo récord
+                        </div>
+                        <div class="about__feature">
+                            <i class="fas fa-check-circle"></i>
+                            Materiales de alta calidad
+                        </div>
+                        <div class="about__feature">
+                            <i class="fas fa-check-circle"></i>
+                            Entrega digital e impresa
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5215512345678" class="btn btn--instagram" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i>
+                        Cuéntanos tu proyecto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery section" id="gallery">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Portafolio</span>
+                <h2 class="section__title">Trabajos que inspiran</h2>
+                <p class="section__desc">Cada proyecto es único. Mira lo que hemos creado para nuestros clientes.</p>
+            </div>
+            <div class="gallery__filters">
+                <button class="gallery__filter active" data-filter="all">Todo</button>
+                <button class="gallery__filter" data-filter="lamina">Láminas</button>
+                <button class="gallery__filter" data-filter="lapbook">Lapbooks</button>
+                <button class="gallery__filter" data-filter="marca">Identidad de marca</button>
+                <button class="gallery__filter" data-filter="cartelera">Carteleras</button>
+            </div>
+            <div class="gallery__grid" id="galleryGrid"></div>
+        </div>
+    </section>
+
+    <section class="process section" id="process">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Proceso</span>
+                <h2 class="section__title">Así de fácil funciona</h2>
+                <p class="section__desc">De tu idea a tus manos en 4 pasos simples.</p>
+            </div>
+            <div class="process__grid">
+                <div class="process__card">
+                    <div class="process__icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 class="process__title">1. CUÉNTANOS</h3>
+                    <p class="process__text">Escríbenos por WhatsApp con tu idea, fecha de entrega y referencias. Te cotizamos al instante.</p>
+                </div>
+                <div class="process__arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="process__card">
+                    <div class="process__icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3 class="process__title">2. DISEÑAMOS</h3>
+                    <p class="process__text">Nuestro equipo crea el diseño profesionalmente. Te enviamos una vista previa para aprobación.</p>
+                </div>
+                <div class="process__arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="process__card">
+                    <div class="process__icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3 class="process__title">3. IMPRIMIMOS</h3>
+                    <p class="process__text">Producimos con materiales de alta calidad: papel couche, opalina, lona o el que prefieras.</p>
+                </div>
+                <div class="process__arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="process__card">
+                    <div class="process__icon">
+                        <i class="fas fa-hand-peace"></i>
+                    </div>
+                    <h3 class="process__title">4. RECIBES</h3>
+                    <p class="process__text">Recibe tu proyecto terminado, impreso y listo para entregar. Sin archivos digitales, solo el resultado final en tus manos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing section" id="pricing">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Precios</span>
+                <h2 class="section__title">Planes para estudiantes</h2>
+                <p class="section__desc">Precios accesibles pensados en tu bolsillo.</p>
+            </div>
+            <div class="pricing__grid">
+                <div class="pricing__card">
+                    <div class="pricing__badge">Más popular</div>
+                    <h3 class="pricing__title">Lámina Simple</h3>
+                    <div class="pricing__price">
+                        <span class="pricing__amount">$10</span>
+                        <span class="pricing__period">USD / cada lámina</span>
+                    </div>
+                    <ul class="pricing__features">
+                        <li><i class="fas fa-check"></i> Diseño profesional</li>
+                        <li><i class="fas fa-check"></i> 1 revisión gratuita</li>
+                        <li><i class="fas fa-check"></i> Impresa y lista para entregar</li>
+                        <li><i class="fas fa-check"></i> Papel tipo bond</li>
+                        <li><i class="fas fa-check"></i> Entrega 24-48 hrs</li>
+                    </ul>
+                    <a href="#" class="btn btn--primary pricing__btn" data-plan="Lámina Simple" data-price="$10 USD / cada lámina">
+                        <i class="fab fa-whatsapp"></i>
+                        Lo quiero
+                    </a>
+                </div>
+                <div class="pricing__card pricing__card--featured">
+                    <div class="pricing__badge">Recomendado</div>
+                    <h3 class="pricing__title">Lapbook Completo</h3>
+                    <div class="pricing__price">
+                        <span class="pricing__amount">$25</span>
+                        <span class="pricing__period">USD</span>
+                    </div>
+                    <ul class="pricing__features">
+                        <li><i class="fas fa-check"></i> Diseño profesional premium</li>
+                        <li><i class="fas fa-check"></i> 3 revisiones incluidas</li>
+                        <li><i class="fas fa-check"></i> Impreso a color incluido</li>
+                        <li><i class="fas fa-check"></i> Material interactivo (ventanas, solapas)</li>
+                        <li><i class="fas fa-check"></i> Listo para presentar</li>
+                        <li><i class="fas fa-check"></i> Entrega 48-72 hrs</li>
+                    </ul>
+                    <a href="#" class="btn btn--primary pricing__btn" data-plan="Lapbook Completo" data-price="$25 USD">
+                        <i class="fab fa-whatsapp"></i>
+                        Lo quiero
+                    </a>
+                </div>
+                <div class="pricing__card">
+                    <div class="pricing__badge">Para negocios</div>
+                    <h3 class="pricing__title">Identidad de Marca</h3>
+                    <div class="pricing__price">
+                        <span class="pricing__amount">$60</span>
+                        <span class="pricing__period">USD</span>
+                    </div>
+                    <ul class="pricing__features">
+                        <li><i class="fas fa-check"></i> Logo + manual de marca</li>
+                        <li><i class="fas fa-check"></i> 5 revisiones incluidas</li>
+                        <li><i class="fas fa-check"></i> Tarjetas de presentación</li>
+                        <li><i class="fas fa-check"></i> Papelería corporativa</li>
+                        <li><i class="fas fa-check"></i> Archivos editables</li>
+                        <li><i class="fas fa-check"></i> Entrega 5-7 días</li>
+                    </ul>
+                    <a href="#" class="btn btn--primary pricing__btn" data-plan="Identidad de Marca" data-price="$60 USD">
+                        <i class="fab fa-whatsapp"></i>
+                        Lo quiero
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="quoteModal">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose">&times;</button>
+            <h3 class="modal__title">Solicitar cotización</h3>
+            <form class="modal__form" id="quoteForm">
+                <div class="modal__field">
+                    <label for="modalName">Nombre y Apellido</label>
+                    <input type="text" id="modalName" required placeholder="Ej: María Pérez">
+                </div>
+                <div class="modal__field">
+                    <label for="modalPhone">Número de contacto</label>
+                    <input type="tel" id="modalPhone" required placeholder="Ej: 04121234567">
+                </div>
+                <div class="modal__field">
+                    <label for="modalService">Servicio</label>
+                    <input type="text" id="modalService" readonly>
+                </div>
+                <div class="modal__field">
+                    <label for="modalDetails">Detalles relevantes</label>
+                    <textarea id="modalDetails" rows="4" placeholder="Ej: Necesito una lámina sobre el sistema solar, tamaño carta, con imágenes y colores. La entrega es para el viernes."></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary modal__submit">
+                    <i class="fab fa-whatsapp"></i>
+                    Crear solicitud
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Testimonios</span>
+                <h2 class="section__title">Lo que dicen nuestros clientes</h2>
+            </div>
+            <div class="testimonials__grid">
+                <div class="testimonial__card">
+                    <div class="testimonial__stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial__text">"Salvé mi exposición de biología gracias a PrintArt. La lámina del sistema digestivo quedó increíble y llegó un día antes. 10/10."</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar testimonial__avatar--1"></div>
+                        <div>
+                            <span class="testimonial__name">Sofía Ramírez</span>
+                            <span class="testimonial__role">Universidad Nacional</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial__card">
+                    <div class="testimonial__stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial__text">"Necesitaba el branding para mi emprendimiento de postres y el resultado superó lo que imaginaba. Muy profesionales y rápidos."</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar testimonial__avatar--2"></div>
+                        <div>
+                            <span class="testimonial__name">Diego Martínez</span>
+                            <span class="testimonial__role">Emprendedor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial__card">
+                    <div class="testimonial__stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial__text">"El lapbook de la Revolución Mexicana me ayudó a sacar 10. Tiene ventanas interactivas y unos diseños hermosos. Muy recomendados."</p>
+                    <div class="testimonial__author">
+                        <div class="testimonial__avatar testimonial__avatar--3"></div>
+                        <div>
+                            <span class="testimonial__name">Camila Herrera</span>
+                            <span class="testimonial__role">Preparatoria</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="contact__card">
+                <div class="contact__content">
+                    <span class="section__tag">Contacto</span>
+                    <h2 class="section__title">¿Listo para tu proyecto?</h2>
+                    <p class="contact__text">Cuéntanos qué necesitas y te responderemos en máximo 30 minutos.</p>
+                    <div class="contact__methods">
+                        <a href="https://wa.me/5215512345678" class="contact__method" target="_blank" rel="noopener">
+                            <span class="contact__method-icon"><i class="fab fa-whatsapp"></i></span>
+                            <span class="contact__method-label">WhatsApp</span>
+                            <span class="contact__method-value">+52 55 1234 5678</span>
+                        </a>
+                        <a href="mailto:hola@printart.com" class="contact__method">
+                            <span class="contact__method-icon"><i class="fas fa-envelope"></i></span>
+                            <span class="contact__method-label">Email</span>
+                            <span class="contact__method-value">hola@printart.com</span>
+                        </a>
+                        <a href="#" class="contact__method">
+                            <span class="contact__method-icon"><i class="fab fa-instagram"></i></span>
+                            <span class="contact__method-label">Instagram</span>
+                            <span class="contact__method-value">@printart.mx</span>
+                        </a>
+                    </div>
+                </div>
+                <svg class="contact__splatter" viewBox="0 0 200 200" fill="none">
+                    <circle cx="150" cy="50" r="80" fill="rgba(229,158,221,0.08)"/>
+                    <circle cx="50" cy="150" r="60" fill="rgba(253,246,240,0.15)"/>
+                    <ellipse cx="170" cy="180" rx="45" ry="20" fill="rgba(242,200,238,0.12)" transform="rotate(-10 170 180)"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#" class="logo">
+                        <span class="logo__icon">
+                            <img src="img/icono.webp" alt="PrintArt" width="34" height="34" style="display:block;border-radius:7px;">
+                                <path d="M7 24V9h5l5 7 5-7h5v15h-5v-7l-5 7-5-7v7H7z" fill="#fff"/>
+                            </svg>
+                        </span>
+                <span class="logo__text">print<span class="logo__accent">Art</span></span>
+                    </a>
+                    <p class="footer__mission">Transformamos tus ideas en proyectos impresos profesionales. Estudiantes, emprendedores y creativos confían en nosotros.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__title">Servicios</h4>
+                    <ul class="footer__nav">
+                        <li><a href="#">Láminas educativas</a></li>
+                        <li><a href="#">Lapbooks personalizados</a></li>
+                        <li><a href="#">Carteleras académicas</a></li>
+                        <li><a href="#">Identidad de marca</a></li>
+                        <li><a href="#">Mapas mentales</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4 class="footer__title">Contacto</h4>
+                    <ul class="footer__contact-list">
+                        <li><i class="fab fa-whatsapp"></i> +52 55 1234 5678</li>
+                        <li><i class="fas fa-envelope"></i> hola@printart.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> CDMX, México</li>
+                        <li><i class="fas fa-clock"></i> Respuesta en –30 min</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 PrintArt. Hecho con 💙 para estudiantes y creativos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5215512345678" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/gallery-data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
