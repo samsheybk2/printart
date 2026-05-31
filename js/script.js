@@ -105,6 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
         '#FFF3CD', '#D4A8D4', '#F5E8E0', '#FFB7C5'
     ];
 
+    const SHAPES = ['crown', 'star', 'planet', 'heart', 'bolt'];
+
     function resize() {
         const rect = canvas.parentElement.getBoundingClientRect();
         W = canvas.width = rect.width;
@@ -119,10 +121,79 @@ document.addEventListener('DOMContentLoaded', () => {
                 y: Math.random() * H,
                 vx: (Math.random() - 0.5) * 0.4,
                 vy: (Math.random() - 0.5) * 0.4,
-                radius: Math.random() * 3 + 2,
-                color: COLORS[Math.floor(Math.random() * COLORS.length)]
+                radius: Math.random() * 5 + 4,
+                color: COLORS[Math.floor(Math.random() * COLORS.length)],
+                shape: SHAPES[Math.floor(Math.random() * SHAPES.length)]
             });
         }
+    }
+
+    function drawStar(cx, cy, r) {
+        const spikes = 5;
+        const outerR = r;
+        const innerR = r * 0.4;
+        ctx.beginPath();
+        for (let i = 0; i < spikes * 2; i++) {
+            const rad = i % 2 === 0 ? outerR : innerR;
+            const angle = (i * Math.PI) / spikes - Math.PI / 2;
+            const x = cx + Math.cos(angle) * rad;
+            const y = cy + Math.sin(angle) * rad;
+            i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.fill();
+    }
+
+    function drawHeart(cx, cy, r) {
+        ctx.beginPath();
+        const s = r * 0.6;
+        ctx.moveTo(cx, cy + s * 0.8);
+        ctx.bezierCurveTo(cx - s, cy - s * 0.5, cx - s, cy - s * 1.2, cx, cy - s * 0.4);
+        ctx.bezierCurveTo(cx + s, cy - s * 1.2, cx + s, cy - s * 0.5, cx, cy + s * 0.8);
+        ctx.fill();
+    }
+
+    function drawCrown(cx, cy, r) {
+        const pts = 5;
+        const base = r;
+        ctx.beginPath();
+        for (let i = 0; i < pts; i++) {
+            const angle = (i * 2 * Math.PI) / pts - Math.PI / 2;
+            const x = cx + Math.cos(angle) * base;
+            const y = cy + Math.sin(angle) * base * 0.5;
+            const tipR = base * 1.5;
+            const tipAngle = angle + Math.PI / pts;
+            const tx = cx + Math.cos(tipAngle) * tipR;
+            const ty = cy + Math.sin(tipAngle) * tipR * 0.5;
+            i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+            ctx.lineTo(tx, ty);
+        }
+        ctx.closePath();
+        ctx.fill();
+    }
+
+    function drawPlanet(cx, cy, r) {
+        ctx.beginPath();
+        ctx.arc(cx, cy, r * 0.6, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = ctx.fillStyle;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.ellipse(cx, cy, r * 1.2, r * 0.25, 0.3, 0, Math.PI * 2);
+        ctx.stroke();
+    }
+
+    function drawBolt(cx, cy, r) {
+        ctx.beginPath();
+        const s = r * 0.8;
+        ctx.moveTo(cx + s * 0.3, cy - s);
+        ctx.lineTo(cx - s * 0.15, cy - s * 0.1);
+        ctx.lineTo(cx + s * 0.05, cy - s * 0.1);
+        ctx.lineTo(cx - s * 0.3, cy + s);
+        ctx.lineTo(cx + s * 0.25, cy + s * 0.1);
+        ctx.lineTo(cx + s * 0.05, cy + s * 0.1);
+        ctx.closePath();
+        ctx.fill();
     }
 
     function draw() {
@@ -147,10 +218,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 node.y -= dy * force * 0.03;
             }
 
-            ctx.beginPath();
-            ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
             ctx.fillStyle = node.color;
-            ctx.fill();
+            switch (node.shape) {
+                case 'star': drawStar(node.x, node.y, node.radius); break;
+                case 'heart': drawHeart(node.x, node.y, node.radius); break;
+                case 'crown': drawCrown(node.x, node.y, node.radius); break;
+                case 'planet': drawPlanet(node.x, node.y, node.radius); break;
+                case 'bolt': drawBolt(node.x, node.y, node.radius); break;
+                default:
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+                    ctx.fill();
+            }
 
             for (let j = i + 1; j < nodes.length; j++) {
                 const other = nodes[j];
